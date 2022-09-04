@@ -172,7 +172,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-09-04 20:15:34 / 修改时间：20:28:12" itemprop="dateCreated datePublished" datetime="2022-09-04T20:15:34+08:00">2022-09-04</time>
+              <time title="创建时间：2022-09-04 20:15:34 / 修改时间：20:55:01" itemprop="dateCreated datePublished" datetime="2022-09-04T20:15:34+08:00">2022-09-04</time>
             </span>
 
           
@@ -186,7 +186,34 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>2022年9月4日的那个夜晚，图书馆外电闪雷鸣，<strong>Noah</strong>的博客诞生了！</p>
+          <h1 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h1><p>2022年9月4日的那个夜晚，图书馆外电闪雷鸣，<strong>Noah</strong>的博客诞生了！</p>
+<h1 id="经过"><a href="#经过" class="headerlink" title="经过"></a>经过</h1><p>博客是依照知乎上的一篇<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102592286">教程</a>搭建的，教程非常详细，过程也并不复杂，几小时便能搭建上线，推荐想搭建个人博客的朋友看看</p>
+<p>这里大致记录一下搭建的过程</p>
+<ol>
+<li><p>我们需要拥有一个<a target="_blank" rel="noopener" href="https://github.com/">Github</a>账号，没有的话注册一个就可以了。</p>
+</li>
+<li><p>安装<a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a>。Git是一个开源的版本控制软件，在开发中尤其是多人协同开发中应用广泛。</p>
+</li>
+<li><p>通过SSH协议将本地的Git仓库绑定到Github。</p>
+</li>
+<li><p>购买自己的域名。很多服务商例如腾讯云，阿里云都可以购买域名。这里我是跟着原作者在<a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/">万网</a>购买了一个.com的域名，一年六七十块钱这样，也不算太贵。</p>
+</li>
+<li><p>安装Node.js和Hexo。Hexo是我们即将搭建的博客的模板，而Hexo需要基于Node.js使用。</p>
+</li>
+<li><p>将GitHub上的域名解析到我们购买的域名上，这样便可以通过我们自己的域名访问网站了。</p>
+</li>
+<li><p>完善自己的网站。</p>
+</li>
+</ol>
+<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><p>网站在本地修改完成后，需要通过“hexo三部曲”将本地的修改上传到网络上。</p>
+<ol>
+<li>用Git Bash打开Blog所属的文件夹</li>
+<li>输入指令 hexo clean</li>
+<li>输入指令 hexo g</li>
+<li>输入指令 hexo d</li>
+</ol>
+<p>这样便完成了修改，但网络上的修改可能稍有延迟，等一会就可以了。</p>
+<p>如果只是需要进行本地调试的话，那么只需要输入 hexo s ，再在浏览器中打开[<a href="http://localhost:4000]便可以看到网站效果了。">http://localhost:4000]便可以看到网站效果了。</a></p>
 
       
     </div>
