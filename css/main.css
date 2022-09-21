@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #e57c3c;
+  background: #ff06ac;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2570,4 +2570,11 @@ ul.breadcrumb li + li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+figure {
+/*图注CSS样式根据需要修改*/
+  font-size: 12px;
+  font-weight: normal;
+  color: #8c8c8c;
+  text-align: center;
 }
