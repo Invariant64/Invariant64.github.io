@@ -27,23 +27,23 @@
 <meta property="og:site_name" content="Noah&#39;s Blog">
 <meta property="og:description" content="本篇博客通过vscode插件“Hexo3StepHelper”一键发布  偶尔杀鸡用用牛刀也许不算坏">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/vscode-extension.png">
-<meta property="og:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/typeofextension.png">
-<meta property="og:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/nameofextension.png">
-<meta property="og:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/identifierofextension.png">
-<meta property="og:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/enablejscheck.png">
-<meta property="og:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/initgit.png">
-<meta property="og:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/choosepackage.png">
-<meta property="og:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/debug.png">
-<meta property="og:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/helloworld.png">
-<meta property="og:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/success.png">
-<meta property="og:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/structure.png">
-<meta property="og:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/hexo3stephelper.png">
+<meta property="og:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild/vscode-extension.png">
+<meta property="og:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild/typeofextension.png">
+<meta property="og:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild/nameofextension.png">
+<meta property="og:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild/identifierofextension.png">
+<meta property="og:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild/enablejscheck.png">
+<meta property="og:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild/initgit.png">
+<meta property="og:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild/choosepackage.png">
+<meta property="og:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild/debug.png">
+<meta property="og:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild//helloworld.png">
+<meta property="og:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild/success.png">
+<meta property="og:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild/structure.png">
+<meta property="og:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild/hexo3stephelper.png">
 <meta property="article:published_time" content="2022-09-17T12:23:21.000Z">
 <meta property="article:modified_time" content="2022-09-21T14:26:11.894Z">
 <meta property="article:author" content="Noah">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/SimpleVSCodeExtensionBuild/vscode-extension.png">
+<meta name="twitter:image" content="http://example.com/2022/09/17/images/SimpleVSCodeExtensionBuild/vscode-extension.png">
 
 <link rel="canonical" href="http://example.com/2022/09/17/%E7%AE%80%E5%8D%95VSCode%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/">
 
@@ -219,14 +219,12 @@
 </blockquote>
 <p><em>偶尔杀鸡用用牛刀也许不算坏</em></p>
 <span id="more"></span>
-
 <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在以Hexo为框架的个人博客上对文章进行修改后，需要通过三条hexo指令将修改更新到网络上：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
 <p>博客每一次有一点的更改，甚至只改一个字，也需要输入这三条指令进行上传，未免有些繁琐。于是，我将这三条指令写进了一个批处理文件中，每次修改后执行一次bat文件便能完成上传。</p>
 <p>由于在VSCode里写博客，每次打开bat文件仍然需要输入指令，尽管并不麻烦，但我仍然觉得不够意思。有没有一种方式，能一键进行上传呢？自然而然，我想到了VSCode的插件。</p>
 <p>从软件的分类来说，Visual Studio属于集成开发环境（IDE），即集成了文本编辑器、编译器、调试器、用户图形界面等一系列元素的软件；而Visual Studio Code(VSCode) 属于文本编辑器，只具备文本编辑功能。但是，VSCode的插件功能给予了它极大的自由。通过安装插件，能对VSCode的功能进行扩展，使其具备IDE的各种功能。同时，VSCode对插件的开发也有很好的支持和活跃的社区。</p>
-<p><img src="/../images/SimpleVSCodeExtensionBuild/vscode-extension.png"></p>
+<p><img src="../images/SimpleVSCodeExtensionBuild/vscode-extension.png" alt=""></p>
 <h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>在正式开发自己的插件之前，需要先搭建开发环境。</p>
 <p>开发VSCode插件需要官方提供的两个包：</p>
 <ol>
@@ -235,67 +233,61 @@
 </ol>
 <p>两个包通过npm命令安装：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g yo</span><br><span class="line">$ npm install -g generator-code</span><br></pre></td></tr></table></figure>
-
 <p>安装完这两个包，环境也就搭建完成了。</p>
 <h3 id="开发之前"><a href="#开发之前" class="headerlink" title="开发之前"></a>开发之前</h3><p>打开想要开始开发的路径，输入命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yo code</span><br></pre></td></tr></table></figure>
-
 <p>便会进入一串信息的输入，用于构建相应的框架。</p>
 <ol>
 <li><em>What type of extension do you want to create? (Use arrow keys)</em> （即将构建的插件的类型）：</li>
 </ol>
-<p><img src="/../images/SimpleVSCodeExtensionBuild/typeofextension.png"></p>
+<p><img src="../images/SimpleVSCodeExtensionBuild/typeofextension.png" alt=""></p>
 <p>这里根据自己的需求选择就好，作为新手，我们可以选择js语言的extension。</p>
-<ol start="2">
+<ol>
 <li><em>What’s the name of your extension?</em> （插件的名称）：</li>
 </ol>
-<p><img src="/../images/SimpleVSCodeExtensionBuild/nameofextension.png"></p>
+<p><img src="../images/SimpleVSCodeExtensionBuild/nameofextension.png" alt=""></p>
 <p>如题，输入插件的名称。</p>
-<ol start="3">
+<ol>
 <li><em>What’s the identifier of your extension? (myfirstextension)</em>  （插件的标识符）：</li>
 </ol>
-<p><img src="/../images/SimpleVSCodeExtensionBuild/identifierofextension.png"></p>
+<p><img src="../images/SimpleVSCodeExtensionBuild/identifierofextension.png" alt=""></p>
 <p>每个插件在上架VSCode扩展商店前，需要提供一个唯一的标识符，用于识别。</p>
-<ol start="4">
+<ol>
 <li><em>Enable JavaScript type checking in ‘jsconfig.json’?</em> （JS的类型检测）</li>
 </ol>
-<p><img src="/../images/SimpleVSCodeExtensionBuild/enablejscheck.png"></p>
-<ol start="5">
+<p><img src="../images/SimpleVSCodeExtensionBuild/enablejscheck.png" alt=""></p>
+<ol>
 <li><em>Initialize a git repository?</em> （是否创建Git仓库）</li>
 </ol>
-<p><img src="/../images/SimpleVSCodeExtensionBuild/initgit.png"></p>
-<ol start="6">
+<p><img src="../images/SimpleVSCodeExtensionBuild/initgit.png" alt=""></p>
+<ol>
 <li><em>Which package manager to use?</em> （使用哪个包管理器）</li>
 </ol>
-<p><img src="/../images/SimpleVSCodeExtensionBuild/choosepackage.png"></p>
+<p><img src="../images/SimpleVSCodeExtensionBuild/choosepackage.png" alt=""></p>
 <p>等待命令执行完毕，点击调试按钮，会弹出另一个vscode窗口[扩展开发宿主]，这个即是我们调试的插件的环境。</p>
-<p><img src="/../images/SimpleVSCodeExtensionBuild/debug.png"></p>
+<p><img src="../images/SimpleVSCodeExtensionBuild/debug.png" alt=""></p>
 <p>快捷键Ctrl+Shift+P调出命令窗口，向其中输入”Hello World”</p>
-<p><img src="/../images/SimpleVSCodeExtensionBuild/helloworld.png"></p>
+<p><img src="../images/SimpleVSCodeExtensionBuild//helloworld.png" alt=""></p>
 <p>输入结束后回车，窗口右下角出现信息提示，便说明插件成功运行了。</p>
-<p><img src="/../images/SimpleVSCodeExtensionBuild/success.png"></p>
+<p><img src="../images/SimpleVSCodeExtensionBuild/success.png" alt=""></p>
 <h3 id="开始开发吧！"><a href="#开始开发吧！" class="headerlink" title="开始开发吧！"></a>开始开发吧！</h3><p>VSCode插件的主要文件结构如下图，作为新手，我们最需要关注的是其中的<strong>packge.json</strong>和<strong>extension.js</strong>。</p>
-<p><img src="/../images/SimpleVSCodeExtensionBuild/structure.png"></p>
+<p><img src="../images/SimpleVSCodeExtensionBuild/structure.png" alt=""></p>
 <p><strong>package.js</strong></p>
 <blockquote>
 <p>这个文件描述了vscode插件的基本信息，具体内容见下：</p>
 </blockquote>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;myfirstextension&quot;</span><span class="punctuation">,</span>                       <span class="comment">//包名</span></span><br><span class="line">  <span class="attr">&quot;displayName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MyFirstExtension&quot;</span><span class="punctuation">,</span>                <span class="comment">//插件名</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;This is my first extension.&quot;</span><span class="punctuation">,</span>     <span class="comment">//插件的描述</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.0.1&quot;</span><span class="punctuation">,</span>                               <span class="comment">//插件的版本号</span></span><br><span class="line">  <span class="attr">&quot;engines&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>                                      <span class="comment">//插件支持的最低vscode版本</span></span><br><span class="line">    <span class="attr">&quot;vscode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.71.0&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;categories&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span>                                   <span class="comment">//插件在商店中的分类</span></span><br><span class="line">    <span class="string">&quot;Other&quot;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;activationEvents&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span>                             <span class="comment">//插件被激活时的事件</span></span><br><span class="line">    <span class="string">&quot;onCommand:myfirstextension.helloWorld&quot;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./extension.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;contributes&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>                                  <span class="comment">//贡献点</span></span><br><span class="line">    <span class="attr">&quot;commands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">&#123;</span>                                  <span class="comment">//这里定义新命令，将在后面的extension.js中实现</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;myfirstextension.helloWorld&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Hello World&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>                                      <span class="comment">//脚本</span></span><br><span class="line">    <span class="attr">&quot;lint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;eslint .&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;pretest&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npm run lint&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node ./test/runTest.js&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;devDependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>                              <span class="comment">//依赖的一些版本信息</span></span><br><span class="line">    <span class="attr">&quot;@types/vscode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.71.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/glob&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/mocha&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^9.1.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/node&quot;</span><span class="punctuation">:</span> <span class="string">&quot;16.x&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eslint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^8.20.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;glob&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^8.0.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;mocha&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^10.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;typescript&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.7.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@vscode/test-electron&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.1.5&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>extension.js</strong></p>
 <blockquote>
 <p>这个JavaScript文件是插件执行的入口，具体内容见下：</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// The module &#x27;vscode&#x27; contains the VS Code extensibility API</span></span><br><span class="line"><span class="comment">// Import the module and reference it with the alias vscode in your code below</span></span><br><span class="line"><span class="comment">// 导入vscode模块，这个模块包括了一些与vscode交互的扩展接口</span></span><br><span class="line"><span class="keyword">const</span> vscode = <span class="built_in">require</span>(<span class="string">&#x27;vscode&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// this method is called when your extension is activated</span></span><br><span class="line"><span class="comment">// your extension is activated the very first time the command is executed</span></span><br><span class="line"><span class="comment">// 当插件被激活时，会调用activate函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">activate</span>(<span class="params">context</span>) &#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Use the console to output diagnostic information (console.log) and errors (console.error)</span></span><br><span class="line">	<span class="comment">// This line of code will only be executed once when your extension is activated</span></span><br><span class="line">    <span class="comment">// 如果需要输出调试信息的话，可以通过console.log来输出</span></span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Congratulations, your extension &quot;myfirstextension&quot; is now active!&#x27;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// The command has been defined in the package.json file</span></span><br><span class="line">	<span class="comment">// Now provide the implementation of the command with  registerCommand</span></span><br><span class="line">	<span class="comment">// The commandId parameter must match the command field in package.json</span></span><br><span class="line">    <span class="comment">// 这里注册了一个命令，给在package.json中定义的命令提供了实现，当命令每次执行时，这里的方法都会被执行</span></span><br><span class="line">	<span class="keyword">let</span> disposable = vscode.<span class="property">commands</span>.<span class="title function_">registerCommand</span>(<span class="string">&#x27;myfirstextension.helloWorld&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">		<span class="comment">// The code you place here will be executed every time your command is executed</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// Display a message box to the user</span></span><br><span class="line">        <span class="comment">// showInformationMessage方法可以通过信息窗口输出信息</span></span><br><span class="line">		vscode.<span class="property">window</span>.<span class="title function_">showInformationMessage</span>(<span class="string">&#x27;Hello World from MyFirstExtension!&#x27;</span>);</span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//这句是插件模板语句</span></span><br><span class="line">	context.<span class="property">subscriptions</span>.<span class="title function_">push</span>(disposable);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// this method is called when your extension is deactivated</span></span><br><span class="line"><span class="comment">//当插件被销毁（可以理解为关闭）时会调用deactivate方法</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">deactivate</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//每个插件都必须包含activate和deactivate模块</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">	activate,</span><br><span class="line">	deactivate</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h3 id="打包与发布"><a href="#打包与发布" class="headerlink" title="打包与发布"></a>打包与发布</h3><p>插件在完成编写后，可以通过几种方式分享给别人。</p>
 <p>如果插件只是开发来自己使用或者在小范围内使用的话，只需要将打包后的插件发送给使用者，使用者在本地安装就可以了。如果想要将自己的插件在互联网中分享，那么将插件上架到vscode的插件市场，那么所有人都可以下载安装你的插件。</p>
 <p>打包发布插件需要vsce工具，通过命令安装：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g vsce</span><br></pre></td></tr></table></figure>
-
 <p>安装完成后，在插件的根目录里执行命令便可以对插件进行打包。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vsce package</span><br></pre></td></tr></table></figure>
-
 <p>打包后文件夹中会出现一个插件名.vsix的文件，这个便是打包后的插件了。在vscode中双击该文件，便可以进行安装使用了。</p>
 <p>注意：打包插件前需要修改README.md文件，否则无法进行打包。</p>
 <p>将插件发布至扩展市场，需要注册一个开发者账号，具体步骤可以参考<a target="_blank" rel="noopener" href="https://code.visualstudio.com/api/working-with-extensions/publishing-extension">官方文档</a></p>
@@ -305,15 +297,13 @@
 </ol>
 <p>获取对应的token后，在插件根目录里执行命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vsce login 你的用户名</span><br></pre></td></tr></table></figure>
-
 <p>然后输入获得的token，便完成了账号的绑定。</p>
 <p>再执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vsce publish</span><br></pre></td></tr></table></figure>
-
 <p>这样插件便发布到了扩展市场，稍后便可以在网页或vscode的插件市场里搜索到自己的插件了。</p>
 <p>如果需要升级已发布的插件，只需要修改版本号再执行vsce publish即可。</p>
 <h3 id="目的达成"><a href="#目的达成" class="headerlink" title="目的达成"></a>目的达成</h3><p>经历了一番折腾后，我的第一个插件Hexo3StepHelper成功实现了一键更新博客（这篇博客便是通过Hexo3StepHelper一键发布），插件也成功发布到了vscode的扩展市场里，可以被任何人搜索到，后续也会不断更新新功能。也欢迎用vscode和Hexo搭配写博客的朋友试试Hexo3StepHelper，期待着大家的宝贵意见。</p>
-<p><img src="/../images/SimpleVSCodeExtensionBuild/hexo3stephelper.png"></p>
+<p><img src="../images/SimpleVSCodeExtensionBuild/hexo3stephelper.png" alt=""></p>
 
     </div>
 
@@ -332,7 +322,10 @@
     <a href="/2022/09/05/Tech-Otakus-Save-The-World/" rel="prev" title="Tech Otakus Save The World">
       <i class="fa fa-chevron-left"></i> Tech Otakus Save The World
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2023/02/04/SQL%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" rel="next" title="SQL语法笔记">
+      SQL语法笔记 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -407,7 +400,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -435,7 +428,7 @@
 <div class="copyright">
   
   &copy; 2022-09 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -542,6 +535,11 @@ $(document).ready(function() {
 
 
   
+
+  
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
 
   
 
